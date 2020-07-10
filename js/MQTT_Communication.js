@@ -4,8 +4,8 @@ var led_is_on = 4;
 var hostname = "broker.mqtt-dashboard.com";	// MQTT Broker Server
 var port = "8000";
 var clientId = "mqtt_js_" + parseInt(Math.random() * 100000, 10);
-var PUB_topic = "subsensor"; // Publish Topic
-var SUB_topic = "Sensor2";	// Subscribe Topic
+var PUB_topic = "Pub_Data"; // Publish Topic
+var SUB_topic = "Sub_Data";	// Subscribe Topic
 
 function connect() {
     // Set up the client
@@ -32,6 +32,8 @@ function onConnect(context) {
         qos: 0,
         onSuccess: function(context) {
             console.log("subscribed");
+            console.log("PUB_topic : " + PUB_topic);
+            console.log("SUB_topic : " + SUB_topic);
         }
     }
     client.subscribe(SUB_topic, options);
