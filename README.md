@@ -38,6 +38,7 @@
 
 ![2](https://user-images.githubusercontent.com/50040251/87136968-2d2e7d00-c2d7-11ea-9e55-b8a88eed3c9b.png)
 - 총 5가지의 데이터를 입력받을 수 있습니다. 데이터 형식은 JSON형식입니다.
+
 ![3](https://user-images.githubusercontent.com/50040251/87136975-2e5faa00-c2d7-11ea-994c-12c5a48a5ddf.png)
 - 센서로부터 PayloadString으로 데이터가 넘어오면 JSON.parse를 통해 데이터를 나누어 입력받게 구현하였습니다.
 - 쪼개어진 데이터들이 화면 해당 위치에 맞게끔 출력됩니다.
