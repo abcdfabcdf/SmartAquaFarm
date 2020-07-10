@@ -29,7 +29,7 @@
 > ### MQTT Broker Server 연결
 ![1](https://user-images.githubusercontent.com/50040251/87136863-0bcd9100-c2d7-11ea-9f72-10121fc6e9ad.png)
 - MQTT Library를 사용하여 MQTT 통신을 할 수 있게 하였습니다.
-- URL과 Port를 각각 맞춰 Broker Server와 연결시켜주는 작업을 하였습니다.
+- Host Port를 각각 맞춰 Broker Server와 연결시켜주는 작업을 하였습니다.
 - Publish Topic과 Subscribe Topic을 정하여 데이터를 브로커 서버로 하여금 주고받을 수 있도록 구현하였습니다.
 
 ### 데이터 송수신
