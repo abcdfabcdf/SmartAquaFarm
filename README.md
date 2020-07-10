@@ -44,12 +44,12 @@
 
 > ### 송신(웹/어플 -> 센서)
 
-> LED
+#### LED
 ![4](https://user-images.githubusercontent.com/50040251/87137029-3cadc600-c2d7-11ea-8adb-1b7a4ac81c5d.png)
 ![5](https://user-images.githubusercontent.com/50040251/87137034-3ddef300-c2d7-11ea-85fa-53433a91db71.png)
 - ON/OFF로 작동시키며, ON버튼 누를 시 IoT 제품의 UV LED에서 불이 켜지고, OFF버튼를 누를 시 UV LED의 불이 꺼집니다.
 
-> PUMP
+#### PUMP
 ![6](https://user-images.githubusercontent.com/50040251/87137074-4a634b80-c2d7-11ea-8720-b9284f186f82.png)
 ![7](https://user-images.githubusercontent.com/50040251/87137076-4afbe200-c2d7-11ea-9d24-aaef960e9d68.png)
 - ON/OFF로 작동시키며, ON버튼 누를 시  IoT 제품의 PUMP로 어항의 있는 물을 끌어올려 작물에게 물을 줄 수 있으며, OFF버튼를 누를 시 PUMP의 작동이 멈추게 됩니다.
