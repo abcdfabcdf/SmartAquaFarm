@@ -40,7 +40,7 @@
 - 총 5가지의 데이터를 입력받을 수 있습니다. 데이터 형식은 JSON형식입니다.
 
 ![3](https://user-images.githubusercontent.com/50040251/87136975-2e5faa00-c2d7-11ea-994c-12c5a48a5ddf.png)
-- 센서로부터 PayloadString으로 데이터가 넘어오면 JSON.parse를 통해 데이터를 나누어 입력받게 구현하였습니다.
+- 센서로부터 PayloadString으로 데이터가 넘어오면 JSON.parse 함수를 통해 데이터를 나누어 입력받게 구현하였습니다.
 - 쪼개어진 데이터들이 화면 해당 위치에 맞게끔 출력됩니다.
 
 > ### 송신(웹/어플 -> 센서)
@@ -53,4 +53,4 @@
 #### PUMP
 ![6](https://user-images.githubusercontent.com/50040251/87137074-4a634b80-c2d7-11ea-8720-b9284f186f82.png)
 ![7](https://user-images.githubusercontent.com/50040251/87137076-4afbe200-c2d7-11ea-9d24-aaef960e9d68.png)
-- ON/OFF로 작동시키며, ON버튼 누를 시  IoT 제품의 PUMP로 어항의 있는 물을 끌어올려 작물에게 물을 줄 수 있으며, OFF버튼를 누를 시 PUMP의 작동이 멈추게 됩니다.
+- ON/OFF로 작동시키며, ON버튼 누를 시 IoT 제품의 PUMP로 어항의 있는 물을 끌어올려 작물에게 물을 줄 수 있으며, OFF버튼를 누를 시 PUMP의 작동이 멈추게 됩니다.
