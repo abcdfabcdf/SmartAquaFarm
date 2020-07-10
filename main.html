@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .img-temp,
+        .img-humid,
+        .img-soil_humid,
+        .img-water_temp,
+        .img-dust {
+            width: 60px;
+            position: relative;
+            top: 30px;
+        }
+
+        .icon-temp {
+            position: relative;
+            top: -30px;
+        }
+
+        .icon-humid {
+            position: relative;
+            top: -60px;
+        }
+
+        .icon-soil_humid {
+            position: relative;
+            top: -90px;
+        }
+
+        .icon-water_temp {
+            position: relative;
+            top: -120px;
+        }
+
+        .icon-dust {
+            position: relative;
+            top: -150px;
+        }
+
+        .button {
+            position: relative;
+            top: -80px;
+        }
+
+        .modal-content {
+            height: 906px;
+        }
+    </style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CCIT Project</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/freelancer.min.css">
+    <!-- MQTT LED Switch CSS-->
+    <link href="css/switch.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css">
+
+</head>
+
+<body id="page-top" class="index">
+    <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">CCIT PROJECT</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">PROJECT</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div>
+                            <div style="height:33px;">
+                                    <h3 id="PUMP_status" style="font-size:24px;text-align: left;margin-left: 40px;">LED
+                                        status </h3>
+                                    <label class="switch" style="top:-54px;left:110px;">
+                                        <input type="checkbox" onclick="led_toggle()">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+
+                        <h3 id="PUMP_status" style="font-size:24px;text-align: left;margin-left: 40px;float: left;">PUMP
+                            status </h3>
+                        <label class="switch">
+                            <input type="checkbox" onclick="pump_toggle()">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    
+                    <hr class="star-primary">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/aquafarm.png" class="img-responsive" alt="Cabin">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; CCIT Project 2019
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content" style="height:1150px;">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>AQUAFARM</h2>
+                            <hr class="star-primary">
+
+                            <div class="icon-temp">
+                                <img class="img-temp" src="img/temp.png" alt="temp">
+                                <h3 id="Temp_Display">Waiting for temperature update...</h3>
+                                <hr class="star-primary">
+                            </div>
+
+                            <div class="icon-humid">
+                                <img class="img-humid" src="img/humid.png" alt="humid">
+                                <h3 id="Humidity_Display">Waiting for humidity update...</h3>
+                                <hr class="star-primary">
+                            </div>
+
+                            <div class="icon-soil_humid">
+                                <img class="img-soil_humid" src="img/soil_humid.png" alt="soil_humid">
+                                <h3 id="Soil_Display">Waiting for soil_display update...</h3>
+                                <hr class="star-primary">
+                            </div>
+
+                            <div class="icon-water_temp">
+                                <img class="img-water_temp" src="img/water_temp.png" alt="water_temp">
+                                <h3 id="Watertemp_Display">Waiting for WaterTemp update...</h3>
+                                <hr class="star-primary">
+                            </div>
+                            <div class="icon-dust">
+                                <img class="img-dust" src="img/dust.png" alt="dust">
+                                <h3 id="dust_Display">Waiting for Dust update...</h3>
+                                <hr class="star-primary">
+                            </div>
+
+                            <div class="button">
+                                <button type="button" class="btn btn-defB
+                                ault" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
+    <!-- MQTT JavaScript-->
+    <script src="js/MQTT_Communication.js"></script>
+
+    <!-- MQTT Library-->
+    <script src="lib/mqttws31.js"></script>
+
+    <script>
+        connect();
+    </script>
+
+</body>
+
+</html>
